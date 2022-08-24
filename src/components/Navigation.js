@@ -11,14 +11,13 @@ const Navigation = ({userObj}) => {
     
     return (
         <nav>
-            <ul>
-                <li>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li>
-                    <Link to='/profile'>{userObj.displayName}'s Profile</Link>
-                </li>
-            </ul>
+                <span>
+                        <Link className='home' to='/'>Home</Link>
+                </span>
+                <span>
+                        <Link className='profile' to='/profile'>{userObj.displayName}'s Profile</Link>
+                </span>
+
         </nav>
     );
 }

@@ -69,8 +69,8 @@ const Auth = ()=>{
                 {/* {error} */}
                 <br/>
                 <div>
-                    <button onClick={onSocialClick} name='google'><FaGoogle size="30"/></button>
-                    <button onClick={onSocialClick} name='github'><FaGithub size="30" /></button>
+                    <button onClick={onSocialClick} name='google'>Google</button>
+                    <button onClick={onSocialClick} name='github'>GitHub</button>
                 </div>
             </div>
 }

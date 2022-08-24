@@ -5,6 +5,7 @@ img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    margin-bottom: 30px;
 }
 ul{
     list-style: none;
@@ -24,4 +25,23 @@ button{
     width: 200px;
     height: 30px;
     border-radius: 28px;
+}
+nav{
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+span{
+    font-size: 30px;
+}
+
+.home, .profile{
+    text-decoration: none;
+}
+
+.todoinput{
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
 }

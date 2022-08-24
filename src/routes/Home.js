@@ -4,6 +4,7 @@ import { addDoc, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import Todo from '../components/Todo';
 import { v4 as uuidv4 } from 'uuid'; // uuid 는 어떤 특별한 식별자를 랜덤으로 생성해 준다
 import '../styles.css';
+import {FaPlus} from "react-icons/fa";
 
 const Home = ({userObj})=>{ // 라우터로부터 userObj값을 전달받음
     //console.log(userObj); // userObj 확인
@@ -67,8 +68,8 @@ const Home = ({userObj})=>{ // 라우터로부터 userObj값을 전달받음
         <div>
             {userObj.photoURL&& <img src={userObj.photoURL} />}
             <form onSubmit={onTodoSubmit}>
-                <input value={toDo} onChange={onChange} type="text" placeholder='what needs to be done...'/>
-                <input type="submit" value="Add" />
+                <input className='todoinput' value={toDo} onChange={onChange} type="text" placeholder='what needs to be done...'/>
+                <input type="submit" value="+"></input>
             </form>
             <div>
                 {toDos.map((toDo)=>{ // map을 사용할 때는 key값을 넣어야 하는데 key는 React가 어떤 항목을 변경, 추가, 삭제 할지 식별하는 것을 돕고, element에 안정적인 고유성을 부여하기 위해 배열 내부의 element에 지정해주어야 한다, 만약 지정해 주지 않는 다면 Index값이 자동으로 설정되고 이로인해 성능이 저항되거나 문제가 발생할 수 있다
