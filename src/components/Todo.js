@@ -32,11 +32,17 @@ const Todo = ({toDoObj, owner}) => { // Home.js로 부터 toDoObj, owner를 받�
                     <>
                         {owner && ( // 유저가 일치하면 수정 폼을 보여줌
                             <>
+                            <div className='todolist'>
                                 <form onSubmit={onSubmit}>
+                                    <div className='todo'>
                                     <input onChange={onChange} type='text' placeholder='Edit your todo' value={newToDo} required /> 
+                                    </div>
+                                    <div className='todobtn'>
                                     <button onClick={onEdit}>Cancel</button>
                                     <button type='submit'>Update</button>
+                                    </div>
                                 </form>
+                            </div>
                             </>
                         )}
                     </>
@@ -44,9 +50,13 @@ const Todo = ({toDoObj, owner}) => { // Home.js로 부터 toDoObj, owner를 받�
                     <>
                         {owner && ( // 유저가 일치하면 유저의 toDo를 받아옴
                             <>
-                            <h4>{toDoObj.toDo}</h4>
+                            <div className='todolist'>
+                            <div className='todo'>{toDoObj.toDo}</div>
+                            <div className='todobtn'>
                             <button onClick={onEdit}>Edit</button>
                             <button onClick={onDelete}>Delete</button>
+                            </div>
+                            </div>
                             </>
                         )}
                     </>

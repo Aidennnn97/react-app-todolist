@@ -95,7 +95,7 @@ const Profile = ({refreshUser, userObj})=>{
             userObj.photoURL ?
             <>
                 <img src={userObj.photoURL} width="50px" height="50px"/>
-                <button onClick={onRemovePhoto}>remove</button>
+                <button onClick={onRemovePhoto}>Remove Profile</button>
             </> :
             <>
                 {photo ? // Img파일이 존재하면 img를 보여주고 아니면 파일선택을 보여줌
