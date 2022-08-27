@@ -1,4 +1,9 @@
 # TodoList
  TodoList Web
 
-Firebase, React.js
+JavaScript(React.js)
+Firebase(Authentication, FireStore, Storage)
+
+1. Login
+2. CRUD toDo
+3. Profile
